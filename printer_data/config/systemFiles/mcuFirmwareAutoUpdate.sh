@@ -11,6 +11,7 @@ read -p "SKR E3 Turbo firmware flashed, please check above for any errors. Press
 
 make clean KCONFIG_CONFIG=rpi_klipper.config
 make menuconfig KCONFIG_CONFIG=rpi_klipper.config
+make -j4 KCONFIG_CONFIG=rpi_klipper.config
 read -p "RPi firmware built, please check above for any errors. Press [Enter] to continue flashing, or [Ctrl+C] to abort"
 make -j4 flash KCONFIG_CONFIG=rpi_klipper.config
 
